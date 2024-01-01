@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container
+        {
+
+        } */
+        .title
+        {
+            display: flex;
+            /* justify-content: center; */
+            background-color: green;
+            height: 80px;
+            width: 100%;
+            margin-top: -25px;
+
+        }
+    </style>
+</head>
+<body style="background-color:beige;"> 
+    <div class="container">
+        <div class="title"><h1>TO-DO List</h1></div>
+        <br><br>
+        <div class="row">
+            <div class="input-group" style="display: inline;">
+                <input type="text" placeholder="enter to-do item" id="box" size="30vw">
+            </div>
+            <div class="submit-group" style="display: inline;">
+                <input type="button" value="add" onclick="add_item()" size="10vw">
+            </div>
+        </div>
+        <div class="row">
+            <h2>Tasks</h3>
+            <ul id="list_item"></ul>
+        </div>
+    </div>
+    <script>
+        function add_item()
+        {
+            var item=document.getElementById("box");
+            var list_item=document.getElementById("list_item");
+            if(item.value!="")
+            {
+                var make_li=document.createElement("li");
+                make_li.appendChild(document.createTextNode(item.value));
+                list_item.appendChild(make_li);
+                item.value="";
+
+                make_li.onclick=function()
+                {
+                    this.parentNode.removeChild(this);
+                }
+            }
+            else{
+                alert("add a valid value");
+            }
+        }
+    </script>
+</body>
+</html>
