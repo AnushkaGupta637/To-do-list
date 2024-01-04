@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* .container
+        .body
         {
-
-        } */
+            background-color:rgb(238, 238, 225); 
+        }
         .title
         {
             display: flex;
-            /* justify-content: center; */
-            background-color: green;
-            height: 80px;
-            width: 100%;
-            margin-top: -25px;
-
+            background-color:#964d4d;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 60px;
+            /* width: 100%; */
+        }
+        .row
+        {
+            padding-left: 60px;
         }
     </style>
 </head>
-<body style="background-color:beige;"> 
+<body> 
     <div class="container">
         <div class="title"><h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">TO-DO List</h1></div>
         <br><br>
         <div class="row">
             <div class="input-group" style="display: inline;">
-                <input type="text" placeholder="enter to-do item" id="box" size="30vw">
+                <input type="text" placeholder="enter to-do item" id="box" size="40vw" style="border: solid black 2px;">
             </div>
             <div class="submit-group" style="display: inline;">
-                <input type="button" value="add" onclick="add_item()" size="10vw">
+                <input type="button" value="add" onclick="add_item()" size="10vw" style="background-color: black; color: white; border-radius: 5px;">
             </div>
         </div>
         <div class="row">
